@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Styled HTML Form</title>
+  <style>
+    body {
+      background-color: #f2f2f2; /* Light gray background */
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+
+    form {
+      background-color: #ffffff; /* White form background */
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    .radio-group {
+      display: flex;
+      justify-content: space-around;
+      margin: 8px 0;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    button[type="reset"], button[type="button"] {
+      background-color: #2196F3;
+    }
+
+    button[type="button"]:hover {
+      background-color: #0b7dda;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="#" method="post">
+    <label>First Name:</label>
+    <input type="text" name="firstname" required>
+
+    <label>Last Name:</label>
+    <input type="text" name="lastname" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Date:</label>
+    <input type="date" name="date" required>
+
+    <label>City:</label>
+    <select name="city" required>
+      <option value="">Select city</option>
+      <option value="New York">New York</option>
+      <option value="London">London</option>
+      <option value="Tokyo">Tokyo</option>
+    </select>
+
+    <label>Gender:</label>
+    <div class="radio-group">
+      <label><input type="radio" name="gender" value="male" required> Male</label>
+      <label><input type="radio" name="gender" value="female"> Female</label>
+      <label><input type="radio" name="gender" value="others"> Others</label>
+    </div>
+
+    <label>Address:</label>
+    <textarea name="address" rows="3" required></textarea>
+
+    <label>Country:</label>
+    <select name="country" required>
+      <option value="">Select Country</option>
+      <option value="USA">USA</option>
+      <option value="UK">UK</option>
+      <option value="Japan">Japan</option>
+    </select>
+
+    <div class="button-group">
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+      <button type="button" onclick="window.location.reload()">Cancel</button>
+    </div>
+  </form>
+
+</body>
+</html>
